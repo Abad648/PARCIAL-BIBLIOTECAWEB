@@ -1,0 +1,28 @@
+﻿@model List<Biblioteca.Models.Libro>
+
+<h2>Listado de Libros</h2>
+
+<a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Publicacion</th>
+            <th>Autor</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td>@item.Publicacion</td>
+                <td>@item.Autor</td>
+                <td>@item.Categoria</td>
+            </tr>
+        }
+    </tbody>
+</table>
